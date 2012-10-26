@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 name = 'buildout.packagename'
-version = '1.0'
+version = '1.1dev'
 
 setup(name=name,
     version=version,
