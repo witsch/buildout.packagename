@@ -11,8 +11,9 @@ home = get_distribution(name).location
 
 
 def extract_buildout():
-    lines = map(strip, open(join(home, 'README.rst')))
-    return '\n'.join(lines[lines.index('[buildout]'):])
+    indented = lambda line: line.startswith('  ')
+    lines = filter(indented, open(join(home, 'README.rst')))
+    return '\n'.join(map(strip, lines))
 
 
 def test_buildout_uses_package_name(tmpdir):

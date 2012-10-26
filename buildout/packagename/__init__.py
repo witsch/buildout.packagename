@@ -26,4 +26,9 @@ def extension(buildout):
     path.remove(here)
     setuptools.setup = original
 
+    # if there's a `setup.py` in the current directory
+    # we also want to develop this egg...
+    # print buildout['buildout']
+    buildout['buildout'].setdefault('develop', '.')
+
     return buildout
