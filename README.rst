@@ -1,5 +1,3 @@
-buildout.packagename
-====================
 
 ``buildout.packagename`` is a `zc.buildout`_ extension which can be used
 to extract the package name of an adjacent ``setup.py`` to avoid redundancy.
@@ -22,3 +20,4 @@ An example ``buildout.cfg`` using the extension might look like this::
   recipe = zc.recipe.egg
   interpreter = app
   eggs = ${buildout:package-name}
+
