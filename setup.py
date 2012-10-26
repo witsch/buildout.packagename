@@ -3,15 +3,11 @@ from setuptools import setup, find_packages
 name = 'buildout.packagename'
 version = '1.0'
 
-buildout = open('buildout.cfg').readlines()
-readme = open('README.rst').read() % '  '.join(buildout)
-changes = open('CHANGES.txt').read()
-
 setup(name=name,
     version=version,
     description='A `zc.buildout` extension to extract the package '
                 'name from an adjacent `setup.py`.',
-    long_description=readme + changes,
+    long_description=open('README.rst').read() + open('CHANGES.txt').read(),
     classifiers=[
         'Framework :: Buildout',
         'Intended Audience :: Developers',

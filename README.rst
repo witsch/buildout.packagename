@@ -13,4 +13,12 @@ Usage
 
 An example ``buildout.cfg`` using the extension might look like this::
 
-  %s
+  [buildout]
+  extensions = buildout.packagename
+  develop = .
+  parts = app
+
+  [app]
+  recipe = zc.recipe.egg
+  interpreter = app
+  eggs = ${buildout:package-name}
