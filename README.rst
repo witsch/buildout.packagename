@@ -21,5 +21,6 @@ An example ``buildout.cfg`` using the extension might look like this::
   eggs = ${buildout:package-name}
 
 Please note that since using this extension only makes sense for
-package-specific buildouts, the `develop` setting is set to "."
+package-specific buildouts, the ``develop`` setting is set to "."
 for added convenience.
+
